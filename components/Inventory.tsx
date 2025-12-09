@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Product, Batch, SalesOrder } from '../types';
+import { Product, SalesOrder } from '../types';
 import { generateDemandForecast } from '../services/geminiService';
 
 interface InventoryProps {

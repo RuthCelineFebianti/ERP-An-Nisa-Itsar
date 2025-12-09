@@ -1,5 +1,13 @@
 import { GoogleGenAI, Type } from "@google/genai";
-import { Product, SalesOrder, JournalEntry } from "../types";
+import { SalesOrder, JournalEntry } from "../types";
+
+// Declare process to satisfy TypeScript in browser environment without @types/node
+declare const process: {
+  env: {
+    API_KEY?: string;
+    [key: string]: any;
+  }
+};
 
 // Initialize Gemini Client
 // NOTE: Ideally this comes from process.env.API_KEY, but for this demo context we assume it's injected or set.
